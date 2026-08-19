@@ -22,13 +22,10 @@ import Reports from "./pages/Reports";
 import Users from "./pages/Users";
 import AuditLogs from "./pages/AuditLogs";
 
-
 function App() {
   return (
     <AppDataProvider>
-
-      <BrowserRouter>
-
+      <BrowserRouter basename="/PlacementManagementSystem1">
         <Routes>
 
           {/* =========================================
@@ -39,7 +36,6 @@ function App() {
             path="/admin-login"
             element={<AdminLogin />}
           />
-
 
           {/* =========================================
               PROTECTED ADMIN ROUTES
@@ -65,14 +61,12 @@ function App() {
                 element={<Dashboard />}
               />
 
-
               {/* Students */}
 
               <Route
                 path="/students"
                 element={<Students />}
               />
-
 
               {/* Companies */}
 
@@ -81,14 +75,12 @@ function App() {
                 element={<Companies />}
               />
 
-
               {/* Placement Drives */}
 
               <Route
                 path="/placement-drives"
                 element={<PlacementDrives />}
               />
-
 
               {/* Applications */}
 
@@ -97,14 +89,12 @@ function App() {
                 element={<Applications />}
               />
 
-
               {/* Interviews */}
 
               <Route
                 path="/interviews"
                 element={<Interviews />}
               />
-
 
               {/* Placements */}
 
@@ -113,7 +103,6 @@ function App() {
                 element={<Placements />}
               />
 
-
               {/* Reports */}
 
               <Route
@@ -121,14 +110,12 @@ function App() {
                 element={<Reports />}
               />
 
-
               {/* Users */}
 
               <Route
                 path="/users"
                 element={<Users />}
               />
-
 
               {/* Audit Logs */}
 
@@ -138,13 +125,10 @@ function App() {
               />
 
             </Route>
-
           </Route>
 
         </Routes>
-
       </BrowserRouter>
-
     </AppDataProvider>
   );
 }
